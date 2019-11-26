@@ -1,0 +1,11 @@
+{
+  "name": "vimeo-user-videos-downloader",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^0.19.0",
+    "cheerio": "^1.0.0-rc.3",
+    "luxon": "^1.21.2"
+  }
+}
