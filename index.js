@@ -4,6 +4,7 @@ const httpAdapter = require('axios/lib/adapters/http');
 const { DateTime } = require('luxon');
 const fs = require("fs");
 
+const VIMEO_USER = ''; // insert the vimeo username
 const COOKIE = ''; // insert your cookie here
 const USER_AGENT = 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.97 Safari/537.36';
 
@@ -134,7 +135,7 @@ function downloadFile(config) {
 (async () => {
   // find links
   for (let p = 1; p < 9; p++) { // TODO: automatically find max pages
-    const url = `https://vimeo.com/xxxx/videos/page:${p}/sort:date`;
+    const url = `https://vimeo.com/${VIMEO_USER}/videos/page:${p}/sort:date`;
     const links = await getPageLinks(url);
     totalLinks = totalLinks.concat(links);
     await sleep(1000);
