@@ -134,6 +134,7 @@ function downloadFile(config) {
 
 (async () => {
   // find links
+  let totalLinks = [];
   for (let p = 1; p < 9; p++) { // TODO: automatically find max pages
     const url = `https://vimeo.com/${VIMEO_USER}/videos/page:${p}/sort:date`;
     const links = await getPageLinks(url);
